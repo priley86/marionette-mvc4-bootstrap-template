@@ -1,0 +1,42 @@
+@inherits System.Web.Mvc.WebViewPage
+@using System.Web.Optimization
+
+<!doctype html>
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Backbone.Marionette & Requirejs • TodoMVC</title>
+      @Styles.Render("~/Bundles/CommonStyles")
+      @Styles.Render("~/Bundles/AppStyles")
+      <!--[if IE]>
+        <script src="App/js/lib/ie.js"></script>
+      <![endif]-->
+    </head>
+    <body>
+        <section id="appmain">
+        </section>
+        <footer id="info">
+          <p>Double-click to edit a todo</p>
+          <p>Created by <a href="http://github.com/jsoverson">Jarrod Overson</a></p>
+        </footer>
+
+        <!-- Require -->
+        <script data-main="App/js/main.js" src="Scripts/require.js"></script>
+        <script type="text/javascript">
+        		    define('globalConfig', {
+        		        apiBaseUrl: '/api/'        		       
+        		    });
+		</script>
+
+        <!-- Inline Scripts -->
+        <script>
+            var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-22728809-1']);_gaq.push(['_trackPageview']);
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+    </body>
+</html>
