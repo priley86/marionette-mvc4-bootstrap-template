@@ -15,7 +15,7 @@ require.config({
     'lib/backbone-localStorage' : ['backbone'],
     underscore: { exports: '_' },
     jquery: {exports: '$'},
-    backbone : { exports : 'Backbone', deps : ['jquery','underscore']},
+    backbone: { exports: 'Backbone', deps: ['jquery', 'underscore'] },
     marionette: { exports: 'Backbone.Marionette', deps: ['backbone'] },
     bootstrap : { deps: ['jquery'] },
   },
@@ -25,10 +25,13 @@ require.config({
 
 define([
     'jquery',
+    'Parse',
     'app',
-    'Router'
+    'Router',
+    
 ], function (
     $,
+    Parse,
     app,
     Router
 ) {

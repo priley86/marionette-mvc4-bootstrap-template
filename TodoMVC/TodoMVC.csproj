@@ -133,6 +133,9 @@
     <Content Include="App\js\lib\backbone.marionette.js" />
     <Content Include="App\js\lib\base.js" />
     <Content Include="App\js\lib\ie.js" />
+    <Content Include="App\js\lib\parse-1.2.8.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="App\js\lib\require.js" />
     <Content Include="App\js\lib\tpl.js" />
     <Content Include="App\js\lib\underscore.js" />
@@ -151,6 +154,7 @@
     <Content Include="App\js\pages\home\views\Header.js" />
     <Content Include="App\js\pages\home\views\TodoItemView.js" />
     <Content Include="App\js\pages\home\views\TodoListCompositeView.js" />
+    <Content Include="App\js\Parse.js" />
     <Content Include="App\js\Router.js" />
     <Content Include="App\js\vent.js" />
     <Content Include="Content\bootstrap-responsive.css" />

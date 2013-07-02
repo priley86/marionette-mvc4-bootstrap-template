@@ -1,8 +1,9 @@
 ﻿/*global define, $*/
 
-define(['marionette', 'vent', 'tpl!./templates/layout.html','./views/Header','./views/Footer','./views/ActiveCount', './views/TodoListCompositeView', './collections/TodoList'
+define(['marionette', 'vent', 'tpl!./templates/layout.html', './views/Header', './views/Footer', './views/ActiveCount',
+    './views/TodoListCompositeView', './collections/TodoList', './models/Todo', 'Parse'
 ],
-function (Marionette, vent, layoutTemplate, HeaderView, FooterView, ActiveCountView, TodoListCompositeView, TodoList) {
+function (Marionette, vent, layoutTemplate, HeaderView, FooterView, ActiveCountView, TodoListCompositeView, TodoList, Todo, Parse) {
     "use strict";
 
     return Marionette.Layout.extend({
@@ -40,7 +41,12 @@ function (Marionette, vent, layoutTemplate, HeaderView, FooterView, ActiveCountV
             this.headerRegion.show(new HeaderView(viewOptions));
             this.mainRegion.show(new TodoListCompositeView(viewOptions));
             this.footerRegion.show(new FooterView(viewOptions));
+            
+            // Setup the query for the collection to look for todos from the current user
+            this.todoList.query = new Parse.Query(Todo);
+            this.todoList.query.equalTo("user", Parse.User.current());
 
+            // Fetch all the todo items for this user
             this.todoList.fetch();
         },
         showHide : function () {
