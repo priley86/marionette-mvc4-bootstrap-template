@@ -15,11 +15,21 @@
       <script src="http://www.parsecdn.com/js/parse-1.2.8.min.js"></script>
     </head>
     <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="brand" href="/">Todo MVC</a>
+
+                    <ul id="auth" class="nav pull-right"></ul>
+                </div>
+            </div>
+        </div>
+
         <section id="appmain">
         </section>
         <footer id="info">
           <p>Double-click to edit a todo</p>
-          <p>Created by <a href="http://github.com/jsoverson">Jarrod Overson</a></p>
+          <p>Created by <a href="http://patrickmriley.net">Patrick Riley</a></p>
         </footer>
 
         <!-- Require -->
@@ -29,15 +39,5 @@
         		        apiBaseUrl: '/api/'        		       
         		    });
 		</script>
-
-        <!-- Inline Scripts -->
-        <script>
-            var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-22728809-1']);_gaq.push(['_trackPageview']);
-            (function() {
-                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-            })();
-        </script>
     </body>
 </html>

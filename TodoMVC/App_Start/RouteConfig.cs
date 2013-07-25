@@ -13,6 +13,14 @@ namespace TodoMVC
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.IgnoreRoute("api/{*pathInfo}");
+
+            routes.MapRoute(
+                name: "JsApp", 
+                url: "{*url}",
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+            );
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

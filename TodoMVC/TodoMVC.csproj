@@ -154,9 +154,21 @@
     <Content Include="App\js\pages\home\views\Header.js" />
     <Content Include="App\js\pages\home\views\TodoItemView.js" />
     <Content Include="App\js\pages\home\views\TodoListCompositeView.js" />
+    <Content Include="App\js\pages\login\Controller.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App\js\pages\login\templates\login.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App\js\pages\login\views\LoginView.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="App\js\Parse.js" />
     <Content Include="App\js\Router.js" />
     <Content Include="App\js\vent.js" />
+    <Content Include="App\js\widgets\auth\bootstrap.js" />
+    <Content Include="App\js\widgets\auth\templates\login-logout-control.html" />
+    <Content Include="App\js\widgets\auth\views\LoginLogoutControlView.js" />
     <Content Include="Content\bootstrap-responsive.css" />
     <Content Include="Content\bootstrap-responsive.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -200,10 +212,6 @@
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App\js\common\collections\" />
-    <Folder Include="App\js\common\models\" />
-    <Folder Include="App\js\common\views\" />
-    <Folder Include="App\js\lib\auth\" />
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>

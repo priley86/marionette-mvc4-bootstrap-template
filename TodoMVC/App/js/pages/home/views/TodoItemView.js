@@ -45,7 +45,7 @@ define(['marionette', 'tpl!../templates/todoItemView.html'], function (Marionett
       var ENTER_KEY = 13;
       var todoText = this.ui.edit.val().trim();
 
-      if ( evt.which === ENTER_KEY && todoText ) {
+      if (evt.which === ENTER_KEY && todoText) {
         this.model.set('title', todoText).save();
         this.$el.removeClass('editing');
       }
